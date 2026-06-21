@@ -13,6 +13,7 @@ export default function SignUp(){
     const [password, setPassword] = useState('')
     const [name, setName] = useState('')
     const navigate = useNavigate();
+    const [err,setErr] = useState(null);
 
 
     async function signUp(){
@@ -28,6 +29,8 @@ export default function SignUp(){
             });
             
             await setDoc(doc(db,"users",userCredential.user.uid),{
+                name,
+                email,
                 favorites: []
             })
             
@@ -36,7 +39,10 @@ export default function SignUp(){
         }
         catch(error){
             console.log(error.code)
-            console.log(error.message)
+            setErr(error.message)
+            setEmail('')
+            setPassword('')
+            setName('')
         }
     }
 
@@ -72,6 +78,9 @@ export default function SignUp(){
                     onChange={(e) => setPassword(e.target.value)}
                     />
 				</label>
+                {err&&
+                <p className='error-message'>{err}</p>
+                }
 
 				<button type='button' onClick={signUp}>Sign Up</button>
 			</form>
