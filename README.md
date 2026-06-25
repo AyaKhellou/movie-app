@@ -1,16 +1,118 @@
-# React + Vite
+# Movie App 🎬
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A movie discovery web application built with React and Firebase.
 
-Currently, two official plugins are available:
+Users can browse trending movies, search for titles, explore genres, view detailed movie information, and save favorite movies to their personal account.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Live Demo
 
-## React Compiler
+[live]
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Screenshots
 
-## Expanding the ESLint configuration
+[Add screenshots or GIFs here]
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Features
+
+- 🔍 Search movies using TMDB API
+- 🎭 Browse movies by genre
+- 📈 Discover trending movies
+- ❤️ Save and manage favorites
+- 🔐 User authentication with Firebase
+- 👤 User profile page
+- 🎬 Detailed movie pages with:
+  - Overview
+  - Ratings
+  - Cast information
+  - Similar movie recommendations
+- 📱 Responsive design for desktop and mobile
+
+## Tech Stack
+
+### Frontend
+
+- React 19
+- Vite
+- React Router DOM
+
+### Backend & Database
+
+- Firebase Authentication
+- Cloud Firestore
+
+### External APIs
+
+- TMDB (The Movie Database) API
+
+### Styling
+
+- Modular CSS architecture
+- CSS Variables
+- Shared utility classes
+- Responsive layouts
+
+## Project Structure
+
+```txt
+src/
+├── components/
+├── pages/
+├── hooks/
+├── services/
+├── context/
+├── styles/
+├── App.jsx
+└── main.jsx
+```
+
+## Installation
+
+### Clone the repository
+
+```bash
+git clone https://github.com/AyaKhellou/movie-app.git
+```
+
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Run locally
+
+```bash
+npm run dev
+```
+
+### Build for production
+
+```bash
+npm run build
+```
+
+## Environment Variables
+
+Create a `.env` file and add your TMDB API key:
+
+```env
+VITE_TMDB_API_KEY=your_api_key
+```
+
+If using your own Firebase project, update the configuration inside:
+
+```txt
+src/firebase-config.js
+```
+
+## What I Learned
+
+Through this project I practiced:
+
+- Building a multi-page React application
+- Working with external REST APIs
+- Authentication and user management
+- Firestore database operations
+- State management with React hooks and context
+- Responsive UI development
+- Organizing a scalable React project structure

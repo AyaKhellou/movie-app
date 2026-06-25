@@ -17,7 +17,7 @@ export default function Profile(){
     const [editMode, setEditMode] = useState(false);
     const [bio, setBio] = useState(userData?.bio || 'add bio.');
     const [name, setName] = useState(userData?.name || user.email);
-    
+    const [err,setErr] = useState(null)
 
     async function logout(){
         try{
@@ -25,8 +25,7 @@ export default function Profile(){
             navigate('/login')
         }
         catch(error){
-            console.log(error.code)
-            console.log(error.message)
+            setErr(error.message)
         }
     }
 
@@ -77,6 +76,15 @@ export default function Profile(){
             </div>
         </main>
     )
+    if(err){
+        return(
+            <main className="profile-page page-container">
+            <div className="movie-not-found">
+                <h2>{err}</h2>
+            </div>
+        </main>
+        )
+    }
 
     return (
         <main className="profile-page page-container">

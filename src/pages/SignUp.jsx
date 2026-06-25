@@ -38,7 +38,6 @@ export default function SignUp(){
             
         }
         catch(error){
-            console.log(error.code)
             setErr(error.message)
             setEmail('')
             setPassword('')

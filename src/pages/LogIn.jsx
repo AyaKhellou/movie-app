@@ -19,7 +19,6 @@ export default function LogIn(){
             navigate('/profile')
         }
         catch(error){
-            console.log(error.code)
             setErr(error.message)
             setEmail('')
             setPassword('')
