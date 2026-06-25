@@ -10,13 +10,12 @@ export default function useFavorites(){
 
 
     useEffect(() => {
-        if (!userData?.favorites?.length) return;
-
         Promise.all(
-            userData.favorites.map(id => getMovie(id))
+            userData?.favorites?.map(id => getMovie(id))
         )
         .then(movies => {
             setFavMoviesList(movies);
+            setLoading(false)
         })
         .catch(setErr)
         .finally(()=>setLoading(false))
