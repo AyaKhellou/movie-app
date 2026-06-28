@@ -1,4 +1,4 @@
-# Movie App 🎬
+# CineVerse 🎬
 
 A movie discovery web application built with React and Firebase.
 
@@ -6,7 +6,7 @@ Users can browse trending movies, search for titles, explore genres, view detail
 
 ## Live Demo
 
-[[live](https://cineverse-we.netlify.app/)]
+[[=> CineVerse live](https://cineverse-we.netlify.app/)]
 
 ## Screenshots
 
@@ -53,7 +53,6 @@ Users can browse trending movies, search for titles, explore genres, view detail
 
 - Modular CSS architecture
 - CSS Variables
-- Shared utility classes
 - Responsive layouts
 
 ## Project Structure
